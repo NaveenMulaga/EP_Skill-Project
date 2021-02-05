@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: none;}
+
+input[type=text], input[type=password] {
+  width: 25%;
+  height: 0.1%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+
+
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  
+}
+</style>
+<script>
+function validation(){
+	var id=document.f1.id.value;
+	var uname=document.f1.uname.value;
+	var psw=document.f1.psw.value;
+	
+	if(uname.length==""||psw.length==""||id.length==""){
+		alert("Make sure to fill all the fields");
+		return false;
+		}
+	else if(id.length!=9)
+		{
+		alert("Please Enter Valid Registration Id");
+		return false;
+		}
+
+
+
+	}
+
+
+</script>
+</head>
+<body>
+
+
+
+<form  method="post" name="f1" align="center" onsubmit="return validation()" action="adminCrud.html">
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#User" class="w3-bar-item w3-button">User</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="index.html" class="w3-bar-item w3-button">Logout</a>
+      </div>
+      </div>
+      <h2 align="center">Login Form</h2>
+
+  <div class="container">
+    <label for="id"><b>Id</b></label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <input type="text" placeholder="Enter Your Id" name="id"><br>
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname"><br>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw"><br>
+        
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    &nbsp&nbsp&nbsp&nbsp<button type="submit">Login</button>
+    
+  </div>
+
+  
+</form>
+
+</body>
+</html>

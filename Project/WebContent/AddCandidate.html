@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: none;}
+
+
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+
+
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  
+}
+</style>
+<script>
+function validation(){
+	var id=document.f2.id.value;
+	var uname=document.f2.uname.value;
+	var psw=document.f2.psw.value;
+	var email=document.f2.psw.value;
+	if(uname.length==""||psw.length==""||id.length==""||email.length==""){
+		alert("Make sure to fill all the fields");
+		return false;
+		}
+	else if(id.length!=9)
+		{
+		alert("Please Enter Valid Registration Id");
+		return false;
+		}
+
+
+
+	}
+
+
+</script>
+</head>
+<body>
+
+<h2 align="center">Add Candidate</h2>
+
+<form  method="post" name="f2" align="center" onsubmit="return validation()" action="adminCrud.html">
+  
+
+   
+  <div class="container">
+    <label for="id"><b>Id</b></label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" placeholder="Enter RegistrationNumber" name="id"><br><br>
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname"><br><br>
+    <label for="gender"><b>Gender</b></label>&nbsp&nbsp&nbsp&nbsp&nbsp
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="radio" id="male" name="gender" value="male"><label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female"><label for="female">Female</label><br><br>
+	<label for="dept"><b>Department</b></label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<select id="dept" name="dept">
+			<option value="select">Select--</option>
+			<option value="cse">CSE</option>
+			<option value="ece">ECE</option>
+			<option value="eee">EEE</option>
+			<option value="me">ME</option>
+			<option value="ecm">ECM</option>
+			<option value="pe">PE</option>
+			<option value="ecse">ECSE</option>
+			<option value="bt">BT</option>
+			</select><br><br>
+    <label for="email"><b>Email</b></label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <input type="email" placeholder="Enter Email" name="email"><br><br>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw"><br>	<br>
+    	    
+        
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    &nbsp&nbsp&nbsp&nbsp<button type="submit">Register</button>
+   </div> 
+ 
+  
+
+  
+</form>
+
+</body>
+</html>
